@@ -160,6 +160,7 @@ class AddSearchActivity : BaseActivity(), Injectable, CryptocurrencyAmountDialog
         // User touched the dialog's positive button.
 
         val amount = cryptocurrencyAmountDialog.getAmount()
+        val fees = cryptocurrencyAmountDialog.getFees()
 
         viewModel.selectedCryptocurrency?.let { myCryptocurrency ->
             myCryptocurrency.amount = amount
@@ -167,6 +168,10 @@ class AddSearchActivity : BaseActivity(), Injectable, CryptocurrencyAmountDialog
                     getAmountFiatCounted(amount, myCryptocurrency.cryptoData.priceFiat)
             myCryptocurrency.amountFiatChange24h =
                     getAmountFiatChange24hCounted(myCryptocurrency.amountFiat, myCryptocurrency.cryptoData.pricePercentChange24h)
+            myCryptocurrency.amountFiatChange24h =
+                    getAmountFiatChange24hCounted(myCryptocurrency.amountFiat, myCryptocurrency.cryptoData.pricePercentChange24h)
+            myCryptocurrency.cryptoData.fees = fees
+            myCryptocurrency.amountFiatMinusFees = myCryptocurrency.amountFiat?.minus(myCryptocurrency.amountFiat?.times(myCryptocurrency.cryptoData.fees/100)!!)
         }
 
         val result = Intent()

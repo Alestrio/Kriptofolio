@@ -25,6 +25,7 @@ apply plugin: 'com.google.android.gms.oss-licenses-plugin'
 // Version values at Project level versions.gradle.
 
 android {
+    }
     compileSdkVersion versions.compile_sdk
 
     defaultConfig {
@@ -32,8 +33,9 @@ android {
         minSdkVersion versions.min_sdk
         targetSdkVersion versions.target_sdk
         versionCode 3
-        versionName "1.2.0" // major . minor . patch
+        versionName "1.2.1" // major . minor . patch
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField "boolean", "isDemo", "false"
     }
 
     buildTypes {
@@ -69,7 +71,8 @@ android {
             buildConfigField 'boolean', 'IS_DEMO', 'true'
         }
         full {
-            resValue "string", "app_id_suffix", ""
+            applicationIdSuffix ".full"
+            resValue "string", "app_id_suffix", ".full"
             buildConfigField 'boolean', 'IS_DEMO', 'false'
         }
     }

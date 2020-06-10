@@ -20,6 +20,7 @@ import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.baruckis.kriptofolio.utilities.getAmountFiatChange24hCounted
 import com.baruckis.kriptofolio.utilities.getAmountFiatCounted
+import com.baruckis.kriptofolio.utilities.getAmountFiatMinusFeesCounted
 
 
 /**
@@ -100,6 +101,7 @@ abstract class MyCryptocurrencyDao {
                 currentItem.cryptoData.pricePercentChange24h = updateItem.cryptoData.pricePercentChange24h
                 currentItem.cryptoData.lastFetchedDate = updateItem.cryptoData.lastFetchedDate
 
+
                 if (updateAmount) {
                     currentItem.amount = updateItem.amount
                 }
@@ -107,6 +109,9 @@ abstract class MyCryptocurrencyDao {
                 if (currentItem.amount != null) {
                     currentItem.amountFiat =
                             getAmountFiatCounted(currentItem.amount, currentItem.cryptoData.priceFiat)
+                    //EDIT
+                    currentItem.amountFiatMinusFees =
+                            getAmountFiatMinusFeesCounted(currentItem.amount, currentItem.cryptoData.priceFiat, currentItem.cryptoData.fees)
                     currentItem.amountFiatChange24h =
                             getAmountFiatChange24hCounted(currentItem.amountFiat, currentItem.cryptoData.pricePercentChange24h)
                 }
@@ -142,6 +147,9 @@ abstract class MyCryptocurrencyDao {
                 myCryptocurrency.cryptoData = it
                 myCryptocurrency.amountFiat =
                         getAmountFiatCounted(myCryptocurrency.amount, myCryptocurrency.cryptoData.priceFiat)
+                //EDIT
+                myCryptocurrency.amountFiatMinusFees =
+                        getAmountFiatMinusFeesCounted(myCryptocurrency.amount, myCryptocurrency.cryptoData.priceFiat, myCryptocurrency.cryptoData.fees)
                 myCryptocurrency.amountFiatChange24h =
                         getAmountFiatChange24hCounted(myCryptocurrency.amountFiat, myCryptocurrency.cryptoData.pricePercentChange24h)
             }

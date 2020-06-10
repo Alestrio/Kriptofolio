@@ -27,3 +27,7 @@ fun getAmountFiatCounted(amount: Double?, priceFiat: Double): Double? =
 // Get total amount value change during last 24 hours in fiat currency.
 fun getAmountFiatChange24hCounted(amountFiat: Double?, pricePercentChange24h: Double): Double? =
         amountFiat?.let { it -> it * (pricePercentChange24h / 100) }
+
+//EDIT
+fun getAmountFiatMinusFeesCounted(amount: Double?, priceFiat: Double, fees: Double): Double? =
+        amount?.let {it -> (it * priceFiat) - fees/100 * (it * priceFiat)}

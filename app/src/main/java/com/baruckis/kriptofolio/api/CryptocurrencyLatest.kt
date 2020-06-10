@@ -16,6 +16,8 @@
 
 package com.baruckis.kriptofolio.api
 
+import android.os.Parcelable
+import androidx.room.ColumnInfo
 import com.google.gson.annotations.SerializedName
 
 /**
@@ -43,6 +45,8 @@ data class CryptocurrencyLatest(
         val cmcRank: Int,
         @SerializedName("last_updated")
         val lastUpdated: String,
+        @SerializedName("uphold_fees")
+        val upholdFees: Double,
         val quote: Quote
 ) {
 
@@ -76,7 +80,7 @@ data class CryptocurrencyLatest(
                 @SerializedName("market_cap")
                 val marketCap: Double,
                 @SerializedName("last_updated")
-                val lastUpdated: String
-        )
+                val lastUpdated: String)
+
     }
 }

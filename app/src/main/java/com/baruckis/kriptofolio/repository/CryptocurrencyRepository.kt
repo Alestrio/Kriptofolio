@@ -262,7 +262,7 @@ class CryptocurrencyRepository @Inject constructor(
             val cryptocurrency = Cryptocurrency(it.id, it.name, it.cmcRank.toShort(),
                     it.symbol, fiatCurrencyCode, it.quote.currency.price,
                     it.quote.currency.percentChange1h,
-                    it.quote.currency.percentChange7d, it.quote.currency.percentChange24h, timestamp)
+                    it.quote.currency.percentChange7d, it.quote.currency.percentChange24h, timestamp, it.upholdFees)
             val myCryptocurrency = MyCryptocurrency(it.id, cryptocurrency)
             myCryptocurrencyList.add(myCryptocurrency)
         }
@@ -281,11 +281,12 @@ class CryptocurrencyRepository @Inject constructor(
             val cryptocurrency = Cryptocurrency(it.id, it.name, it.cmcRank.toShort(),
                     it.symbol, fiatCurrencyCode, it.quote.currency.price,
                     it.quote.currency.percentChange1h,
-                    it.quote.currency.percentChange7d, it.quote.currency.percentChange24h, timestamp)
+                    it.quote.currency.percentChange7d, it.quote.currency.percentChange24h, timestamp, it.upholdFees)
             cryptocurrencyList.add(cryptocurrency)
         }
 
         return cryptocurrencyList as ArrayList<Cryptocurrency>
     }
+
 
 }

@@ -116,7 +116,7 @@ class MainActivity : BaseActivity(), HasSupportFragmentInjector {
         })
 
         viewModel.liveDataCurrentFiatCurrencySign.observe(this, Observer<String> { data ->
-            text_column_coin_fiat_btc_price.text = StringBuilder(getString(R.string.string_column_coin_fiat_price_amount, data, data))
+            text_column_coin_fiat_btc_price.text = StringBuilder(getString(R.string.string_column_coin_fiat_price_amount, data, data, data))
             text_column_coin_change_24h_1h_7d.text = StringBuilder(getString(R.string.string_column_coin_change_24h_1h_7d, data))
         })
 

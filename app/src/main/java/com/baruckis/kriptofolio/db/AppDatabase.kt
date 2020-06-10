@@ -23,7 +23,7 @@ import androidx.room.TypeConverters
 /**
  * The Room database for this app.
  */
-@Database(entities = [MyCryptocurrency::class, Cryptocurrency::class], version = 1, exportSchema = false)
+@Database(entities = [MyCryptocurrency::class, Cryptocurrency::class], version = 2, exportSchema = false)
 
 // App needs to use a custom data type whose value you would like to store in a single database
 // column. To add this kind of support for custom types, you provide a TypeConverter, which converts

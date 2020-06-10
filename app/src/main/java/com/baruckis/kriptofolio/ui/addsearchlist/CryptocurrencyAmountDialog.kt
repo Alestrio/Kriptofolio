@@ -73,6 +73,8 @@ class CryptocurrencyAmountDialog : DialogFragment() {
 
     private lateinit var editTextAmount: EditText
     private var valueAmount: Double = 0.0
+    private lateinit var editTextFees: EditText
+    private var valueFees: Double = 0.0
 
 
     // Override the Fragment.onAttach() method to instantiate the CryptocurrencyAmountDialogListener.
@@ -125,6 +127,7 @@ class CryptocurrencyAmountDialog : DialogFragment() {
             }
 
             editTextAmount = dialogView.edit_text_amount
+            editTextFees = dialogView.edit_text_fees
 
             // Initialize the AlertDialog using builder object.
             builder.create()
@@ -160,19 +163,36 @@ class CryptocurrencyAmountDialog : DialogFragment() {
 
     // We check if user entered amount number is valid before confirmation actions.
     private fun onValidateAndConfirm(errorMsg: String): Boolean {
-        return editTextAmount.validate({ text ->
+        if (editTextAmount.validate({ text ->
             try {
                 valueAmount = text.toDouble()
                 true
             } catch (e: Throwable) {
                 false
             }
-        }, errorMsg)
+        }, errorMsg)) {
+            return editTextFees.validate({ text ->
+                try {
+                    valueFees = text.toDouble()
+                    true
+                } catch (e: Throwable) {
+                    false
+                }
+            }, errorMsg)
+        }
+        else{
+            return false;
+        }
     }
 
     // Get the amount which user entered.
     fun getAmount(): Double {
         return valueAmount
+    }
+
+    // Get the fees which user entered.
+    fun getFees(): Double {
+        return valueFees
     }
 
 }

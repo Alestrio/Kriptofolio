@@ -36,6 +36,7 @@ import kotlinx.android.parcel.Parcelize
 import kotlinx.android.synthetic.main.flipview_front_custom.view.*
 
 
+
 class MainRecyclerViewAdapter : RecyclerView.Adapter<MainRecyclerViewAdapter.BindingViewHolder>() {
 
     private var dataList: List<MyCryptocurrency> = ArrayList()
@@ -228,6 +229,9 @@ class MainRecyclerViewAdapter : RecyclerView.Adapter<MainRecyclerViewAdapter.Bin
                     .append(binding.root.context.getString(R.string.string_column_coin_separator_change)).append(getSpannableValueStyled(binding.root.context, myCryptocurrency.cryptoData.pricePercentChange7d, SpannableValueColorStyle.Foreground, ValueType.Fiat, "", "%"))
             binding.itemPricePercentChange24h.text = getSpannableValueStyled(binding.root.context, myCryptocurrency.cryptoData.pricePercentChange24h, SpannableValueColorStyle.Foreground, ValueType.Percent, "", "%")
             binding.itemAmountFiatChange24h.text = getSpannableValueStyled(binding.root.context, myCryptocurrency.amountFiatChange24h, SpannableValueColorStyle.Foreground, ValueType.Percent, "", " ${myCryptocurrency.cryptoData.currencyFiat}")
+            //EDIT
+            binding.itemAmountFiatMinusFees.text = getSpannableValueStyled(binding.root.context, myCryptocurrency.amountFiatMinusFees, SpannableValueColorStyle.Foreground, ValueType.Percent, "", " ${myCryptocurrency.cryptoData.currencyFiat}")
+
 
             binding.executePendingBindings()
         }

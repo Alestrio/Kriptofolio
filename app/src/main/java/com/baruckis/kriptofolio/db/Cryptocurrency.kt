@@ -55,4 +55,6 @@ data class Cryptocurrency(@PrimaryKey
                           @ColumnInfo(name = "price_percent_change_24h")
                           var pricePercentChange24h: Double,
                           @ColumnInfo(name = "last_fetched_date")
-                          var lastFetchedDate: Date?) : Parcelable
+                          var lastFetchedDate: Date?,
+                          @ColumnInfo(name = "uphold_fees")
+                          var fees: Double) : Parcelable

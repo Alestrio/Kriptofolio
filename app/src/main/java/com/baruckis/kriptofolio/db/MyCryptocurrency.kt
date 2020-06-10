@@ -40,5 +40,7 @@ data class MyCryptocurrency(
         var amount: Double? = null,
         @ColumnInfo(name = "amount_fiat")
         var amountFiat: Double? = null,
+        @ColumnInfo(name = "amount_fiat_minus_fees")
+        var amountFiatMinusFees: Double? = null,
         @ColumnInfo(name = "amount_fiat_change_24h")
         var amountFiatChange24h: Double? = null) : Parcelable

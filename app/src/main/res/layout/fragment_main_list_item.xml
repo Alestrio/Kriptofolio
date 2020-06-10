@@ -47,7 +47,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="@dimen/main_guide1_percent" />
+                app:layout_constraintGuide_percent="0.44" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline2_percent"
@@ -59,9 +59,9 @@
             <eu.davidea.flipview.FlipView
                 android:id="@+id/item_image_icon"
                 style="@style/FlipView"
+                android:animateFirstView="false"
                 android:clickable="true"
                 android:focusable="true"
-                android:animateFirstView="false"
                 app:layout_constraintBottom_toTopOf="@+id/item_ranking"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -109,27 +109,35 @@
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/item_price"
                 style="@style/MainListItemText"
-                android:layout_marginStart="@dimen/main_cardview_list_item_text_between_margin"
-                android:layout_marginEnd="@dimen/main_cardview_list_item_text_between_margin"
                 android:textAlignment="center"
                 app:layout_constraintBottom_toTopOf="@+id/item_amount_fiat"
                 app:layout_constraintEnd_toStartOf="@+id/guideline2_percent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/guideline1_percent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_chainStyle="spread"
                 tools:text="@string/sample_text_item_price_fiat" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/item_amount_fiat"
                 style="@style/MainListItemText"
-                android:layout_marginStart="@dimen/main_cardview_list_item_text_between_margin"
-                android:layout_marginEnd="@dimen/main_cardview_list_item_text_between_margin"
+                android:layout_width="0dp"
+                android:layout_height="27dp"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toTopOf="@+id/item_amount_fiat_minus_fees"
+                app:layout_constraintEnd_toStartOf="@+id/guideline2_percent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline1_percent"
+                tools:text="@string/sample_text_item_amount_fiat" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/item_amount_fiat_minus_fees"
+                style="@style/MainListItemText"
+                android:layout_height="wrap_content"
                 android:textAlignment="center"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline2_percent"
                 app:layout_constraintStart_toStartOf="@+id/guideline1_percent"
-                app:layout_constraintTop_toBottomOf="@+id/item_price"
-                tools:text="@string/sample_text_item_amount_fiat" />
+                tools:text="@string/sample_text_item_amount_fiat_minus_fees" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/item_price_percent_change_1h_7d"
