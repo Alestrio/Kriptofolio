@@ -1,9 +1,3 @@
-#Introduction
-This project is a fork of Kriptofolio, an open-source application to manage cryptocurrencies.
-It adds :
-- Fees support and price minus fees computing
-- French translation
-
 # Kriptofolio 
 ## Free open source minimalistic cryptocurrencies portfolio app for Android
 
