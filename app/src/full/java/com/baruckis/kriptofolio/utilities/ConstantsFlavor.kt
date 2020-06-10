@@ -24,4 +24,4 @@ package com.baruckis.kriptofolio.utilities
 // It is used for FULL release version to Google Play Store.
 const val API_SERVICE_BASE_URL = "https://pro-api.coinmarketcap.com/"
 
-const val API_SERVICE_AUTHENTICATION_KEY = "" // TODO: Use your API Key provided by CoinMarketCap Professional API Developer Portal.
+const val API_SERVICE_AUTHENTICATION_KEY = "5087a185-518b-4fab-ab29-736097324dd3" // TODO: Use your API Key provided by CoinMarketCap Professional API Developer Portal.
