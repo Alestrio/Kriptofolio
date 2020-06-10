@@ -8,3 +8,9 @@
 /captures
 .externalNativeBuild
 .idea/
+
+app/full/release/output.json
+
+app/full/release/app-full-release.apk
+
+app/src/full/java/com/baruckis/kriptofolio/utilities/ConstantsFlavor.kt
