@@ -64,7 +64,7 @@
     <!-- Strings related to Main Activity -->
 
     <string name="string_total_value_holdings">"Total holdings value"</string>
-    <string name="string_total_value_on_date_time">" (%1$s UTC)"</string>
+    <string name="string_total_value_on_date_time" translatable="false">" (%1$s UTC)"</string>
     <string name="string_total_value_change_24h_label">"24 h "</string>
     <string name="string_total_value_change_24h" translatable="false">" $ 0.00 "</string>
     <string name="string_separator_value" translatable="false">"/"</string>
@@ -83,12 +83,12 @@
 
     <string name="string_column_coin_ranking" translatable="false">"↑↓"</string>
     <string name="string_column_coin_crypto_hold_amount_symbol">"Crypto coin\nAmount &#38; symbol"</string>
-    <string name="string_column_coin_fiat_price_amount">"Price %1$s\nAmount %2$s"</string>
-    <string name="string_column_coin_change_24h_1h_7d">"± price %% 1 h / 7 d\n± price %% 24 h\n± amount %1$s 24 h"</string>
+    <string name="string_column_coin_fiat_price_amount">Price %1$s Amount %2$s Amount minus fees %3$s</string>
+    <string name="string_column_coin_change_24h_1h_7d">± price %% 1 h / 7 d ± price %% 24 h ± amount %1$s 24 h</string>
     <string name="string_column_coin_separator_change" translatable="false">" / "</string>
 
-    <string name="sample_text_column_coin_fiat_price_amount">"Price $\nAmount $"</string>
-    <string name="sample_text_column_coin_change_24h_1h_7d">"± price % 1 h / 7 d\n± price % 24 h\n± amount $ 24 h"</string>
+    <string name="sample_text_column_coin_fiat_price_amount">"Price $\nAmount $\nAmount - fees $"</string>
+    <string name="sample_text_column_coin_change_24h_1h_7d">± price % 1 h / 7 d ± price % 24 h ± amount $ 24 h</string>
 
     <string name="sample_text_total_value_on_date_time">"Total holdings value (11/03/2018 12:55:08 UTC)"</string>
     <string name="sample_text_total_value_change_24h" translatable="false">" $ +1538.00 "</string>
@@ -344,6 +344,7 @@
         <item>"עִברִית"</item>
         <item>"Lietuvių"</item>
         <item>"Swahili"</item>
+        <item>"Français"</item>
     </string-array>
 
     <string-array name="pref_language_list_values" translatable="false">
@@ -351,6 +352,7 @@
         <item>"HE"</item>
         <item>"LT"</item>
         <item>"SW"</item>
+        <item>"FR"</item>
     </string-array>
 
     <string name="pref_fiat_currency_title">"Fiat currency"</string>
@@ -633,7 +635,7 @@
     <string name="pref_website_key" translatable="false">"website"</string>
     <string name="pref_website_url" translatable="false">"https://kriptofolio.app"</string>
 
-    <string name="pref_author_title">"Author Andrius Baruckis"</string>
+    <string name="pref_author_title">Author Andrius Baruckis</string>
     <string name="pref_author_summary" translatable="false">"www.baruckis.com"</string>
     <string name="pref_author_key" translatable="false">"author"</string>
     <string name="pref_author_url" translatable="false">"https://www.baruckis.com"</string>
@@ -823,6 +825,9 @@
     <!-- Strings related to Oss Licenses Menu Activity -->
 
     <string name="activity_oss_licenses_menu_title">"All libraries licenses"</string>
+    <string name="sample_text_item_amount_fiat_minus_fees">17 123 12,23 USD</string>
+    <string name="fees">Fees (%)</string>
+    <string name="qty">Amount :</string>
 
 
 </resources>

@@ -37,7 +37,6 @@
     <!-- Strings related to Main Activity -->
 
     <string name="string_total_value_holdings">"ערך אחזקות סה\"כ"</string>
-    <string name="string_total_value_on_date_time">" (UTC %1$s)"</string>
     <string name="string_total_value_change_24h_label">" h 24"</string>
 
     <string name="string_crypto_list_empty_primary">"רשימת המטבעות המבוזרים שבבעלותך ריקה!"</string>

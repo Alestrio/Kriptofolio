@@ -56,6 +56,11 @@ class LocalizationModule {
     fun provideSwahiliResources(context: Context): Resources =
             getLocalizedResources(context, Language.Swahili.locale)
 
+    @Provides
+    @IntoMap
+    @LanguageKey(Language.French)
+    fun provideFrenchResources(context: Context): Resources =
+            getLocalizedResources(context, Language.French.locale)
 
     @Provides
     @Singleton

@@ -37,7 +37,6 @@
     <!-- Strings related to Main Activity -->
 
     <string name="string_total_value_holdings">"Thamani ya jumla ya umiliki"</string>
-    <string name="string_total_value_on_date_time">" (%1$s UTC)"</string>
     <string name="string_total_value_change_24h_label">"24 h "</string>
 
     <string name="string_crypto_list_empty_primary">"Orodha yako ya sarafu ya crypto ni tupu!"</string>

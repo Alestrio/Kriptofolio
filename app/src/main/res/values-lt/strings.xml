@@ -37,7 +37,6 @@
     <!-- Strings related to Main Activity -->
 
     <string name="string_total_value_holdings">"Bendra turima vertė"</string>
-    <string name="string_total_value_on_date_time">" (%1$s UTC)"</string>
     <string name="string_total_value_change_24h_label">"24 val "</string>
 
     <string name="string_crypto_list_empty_primary">"Jums priklausančių kripto monetų sąrašas yra tuščias!"</string>

@@ -24,6 +24,7 @@ object LanguageCodes {
     const val HEBREW = "HE"
     const val LITHUANIAN = "LT"
     const val SWAHILI = "SW"
+    const val FRENCH = "FR"
 }
 
 // Represents our languages.
@@ -31,7 +32,8 @@ enum class Language(val locale: Locale) {
     English(Locale(LanguageCodes.ENGLISH)),
     Hebrew(Locale(LanguageCodes.HEBREW)),
     Lithuanian(Locale(LanguageCodes.LITHUANIAN)),
-    Swahili(Locale(LanguageCodes.SWAHILI));
+    Swahili(Locale(LanguageCodes.SWAHILI)),
+    French(Locale(LanguageCodes.FRENCH));
 
     companion object {
         val DEFAULT = English
